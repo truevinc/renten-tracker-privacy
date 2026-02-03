@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Datenschutzerklärung – RentenTracker</title>
+  <title>Datenschutzerklärung – RentenTracker / Privacy Policy – RetirementTracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
@@ -42,161 +42,370 @@
       font-size: 0.9rem;
       color: #555;
     }
+    .lang-toggle {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+    .lang-toggle button {
+      background: #1f2933;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    .lang-toggle button:hover {
+      background: #3d4f5f;
+    }
+    .lang-de, .lang-en {
+      display: none;
+    }
+    .lang-de.active, .lang-en.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <h1>Datenschutzerklärung für die App „RentenTracker“</h1>
+  <div class="lang-toggle">
+    <button id="langToggle" onclick="toggleLanguage()">English</button>
+  </div>
 
-  <p class="small>Stand: <span id="datum"></span></p>
+  <!-- German Version -->
+  <div class="lang-de active" id="content-de">
+    <h1>Datenschutzerklärung für die App „RentenTracker"</h1>
 
-  <h2>1. Verantwortlicher</h2>
-  <p>
-    Verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser App im Sinne der
-    Datenschutz-Grundverordnung (DSGVO) ist:
-  </p>
-  <p>
-    <strong>[Vincent W.]</strong><br />
-    E-Mail: <a href="mailto:[vincent.waelken@gmail.com]">[vincent.waelken@gmail.com]</a>
-  </p>
+    <p class="small">Stand: <span class="datum"></span></p>
 
-  <h2>2. Allgemeines</h2>
-  <p>
-    Die App <strong>RentenTracker</strong> verarbeitet ausschließlich Daten, die lokal auf dem
-    Gerät der Nutzerinnen und Nutzer gespeichert werden. Es findet keine
-    Übermittlung personenbezogener Daten an mich oder an Dritte statt.
-  </p>
-  <p>
-    Die App ist so gestaltet, dass nur die Daten verarbeitet werden, die für die
-    Bereitstellung der Funktionen unbedingt erforderlich sind („Privacy by Design“).
-  </p>
+    <h2>1. Verantwortlicher</h2>
+    <p>
+      Verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser App im Sinne der
+      Datenschutz-Grundverordnung (DSGVO) ist:
+    </p>
+    <p>
+      <strong>Vincent W.</strong><br />
+      E-Mail: <a href="mailto:vincent.waelken@gmail.com">vincent.waelken@gmail.com</a>
+    </p>
 
-  <h2>3. Welche Daten werden verarbeitet?</h2>
+    <h2>2. Allgemeines</h2>
+    <p>
+      Die App <strong>RentenTracker</strong> verarbeitet ausschließlich Daten, die lokal auf dem
+      Gerät der Nutzerinnen und Nutzer gespeichert werden. Es findet keine
+      Übermittlung personenbezogener Daten an mich oder an Dritte statt.
+    </p>
+    <p>
+      Die App ist so gestaltet, dass nur die Daten verarbeitet werden, die für die
+      Bereitstellung der Funktionen unbedingt erforderlich sind („Privacy by Design").
+    </p>
 
-  <h3>3.1 Lokale App-Daten (auf dem Gerät)</h3>
-  <p>
-    Die App speichert folgende Informationen ausschließlich lokal auf deinem Gerät:
-  </p>
-  <ul>
-    <li>von dir eingestelltes Renteneintrittsdatum,</li>
-    <li>dein ausgewähltes Bundesland,</li>
-    <li>von dir angegebene Urlaubstage,</li>
-    <li>von dir markierte Urlaubstage im Kalender,</li>
-    <li>App-Einstellungen (z.&nbsp;B. Darstellung/Theme).</li>
-  </ul>
-  <p>
-    Diese Daten werden nur verwendet, um dir die Funktionen der App zur Verfügung zu
-    stellen (z.&nbsp;B. Berechnung der verbleibenden Tage bis zur Rente).
-  </p>
-  <p><strong>Diese Daten verlassen dein Gerät nicht.</strong></p>
+    <h2>3. Welche Daten werden verarbeitet?</h2>
 
-  <h3>3.2 Keine Erstellung von Nutzerprofilen</h3>
-  <p>
-    Es werden keine personenbezogenen Profile erstellt. Die App verwendet weder eine
-    Registrierung noch ein Login-System; eine Zuordnung zu einer konkreten Person
-    durch mich ist nicht möglich.
-  </p>
+    <h3>3.1 Lokale App-Daten (auf dem Gerät)</h3>
+    <p>
+      Die App speichert folgende Informationen ausschließlich lokal auf deinem Gerät:
+    </p>
+    <ul>
+      <li>von dir eingestelltes Renteneintrittsdatum,</li>
+      <li>dein ausgewähltes Bundesland,</li>
+      <li>von dir angegebene Urlaubstage,</li>
+      <li>von dir markierte Urlaubstage im Kalender,</li>
+      <li>App-Einstellungen (z.&nbsp;B. Darstellung/Theme).</li>
+    </ul>
+    <p>
+      Diese Daten werden nur verwendet, um dir die Funktionen der App zur Verfügung zu
+      stellen (z.&nbsp;B. Berechnung der verbleibenden Tage bis zur Rente).
+    </p>
+    <p><strong>Diese Daten verlassen dein Gerät nicht.</strong></p>
 
-  <h2>4. Berechtigungen &amp; Zugriff auf Gerätedaten</h2>
+    <h3>3.2 Keine Erstellung von Nutzerprofilen</h3>
+    <p>
+      Es werden keine personenbezogenen Profile erstellt. Die App verwendet weder eine
+      Registrierung noch ein Login-System; eine Zuordnung zu einer konkreten Person
+      durch mich ist nicht möglich.
+    </p>
 
-  <p>
-    Je nach Nutzung können bestimmte Berechtigungen angefordert werden. Diese
-    Berechtigungen werden ausschließlich für die genannten Zwecke verwendet.
-  </p>
+    <h2>4. Berechtigungen &amp; Zugriff auf Gerätedaten</h2>
 
-  <h3>4.1 Lokale Speicherung</h3>
-  <p>
-    Die App speichert Einstellungen und Eingaben (z.&nbsp;B. Rentenbeginn, Urlaub,
-    Bundesland) lokal in einem App-spezifischen Speicherbereich auf deinem Gerät.
-    Es erfolgt keinerlei Übertragung an einen Server.
-  </p>
+    <p>
+      Je nach Nutzung können bestimmte Berechtigungen angefordert werden. Diese
+      Berechtigungen werden ausschließlich für die genannten Zwecke verwendet.
+    </p>
 
-  <h3>4.2 Push-Benachrichtigungen (falls eingesetzt)</h3>
-  <p>
-    Sofern du Benachrichtigungen in der App aktivierst, werden diese nur lokal auf
-    dem Gerät erzeugt. Es werden keine Daten an externe Benachrichtigungs- oder
-    Tracking-Dienste gesendet, soweit dies technisch möglich ist. Du kannst
-    Benachrichtigungen jederzeit in den System-Einstellungen deines Geräts
-    deaktivieren.
-  </p>
+    <h3>4.1 Lokale Speicherung</h3>
+    <p>
+      Die App speichert Einstellungen und Eingaben (z.&nbsp;B. Rentenbeginn, Urlaub,
+      Bundesland) lokal in einem App-spezifischen Speicherbereich auf deinem Gerät.
+      Es erfolgt keinerlei Übertragung an einen Server.
+    </p>
 
-  <h2>5. Keine Weitergabe an Dritte</h2>
-  <p>
-    Es erfolgt keine Weitergabe von Daten an Dritte. Insbesondere:
-  </p>
-  <ul>
-    <li>keine Verwendung von Werbenetzwerken,</li>
-    <li>keine Integration von Analyse- oder Trackingdiensten (z.&nbsp;B. Google Analytics, Firebase Analytics),</li>
-    <li>keine Weitergabe an andere Unternehmen oder Organisationen.</li>
-  </ul>
+    <h3>4.2 Push-Benachrichtigungen (falls eingesetzt)</h3>
+    <p>
+      Sofern du Benachrichtigungen in der App aktivierst, werden diese nur lokal auf
+      dem Gerät erzeugt. Es werden keine Daten an externe Benachrichtigungs- oder
+      Tracking-Dienste gesendet, soweit dies technisch möglich ist. Du kannst
+      Benachrichtigungen jederzeit in den System-Einstellungen deines Geräts
+      deaktivieren.
+    </p>
 
-  <h2>6. Rechtsgrundlage der Verarbeitung</h2>
-  <p>
-    Die Verarbeitung der Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO
-    (Vertragserfüllung), soweit die Daten zur Bereitstellung der Funktionen der App
-    erforderlich sind. Die Nutzung der App ist freiwillig.
-  </p>
+    <h2>5. Keine Weitergabe an Dritte</h2>
+    <p>
+      Es erfolgt keine Weitergabe von Daten an Dritte. Insbesondere:
+    </p>
+    <ul>
+      <li>keine Verwendung von Werbenetzwerken,</li>
+      <li>keine Integration von Analyse- oder Trackingdiensten (z.&nbsp;B. Google Analytics, Firebase Analytics),</li>
+      <li>keine Weitergabe an andere Unternehmen oder Organisationen.</li>
+    </ul>
 
-  <h2>7. Speicherdauer &amp; Löschung</h2>
-  <p>
-    Sämtliche Daten werden ausschließlich lokal auf deinem Gerät gespeichert. Du
-    kannst diese Daten jederzeit löschen, indem du:
-  </p>
-  <ul>
-    <li>die App deinstallierst oder</li>
-    <li>in den Systemeinstellungen deines Geräts die App-Daten zurücksetzt.</li>
-  </ul>
-  <p>
-    Nach Deinstallation der App sind alle lokal gespeicherten Daten entfernt.
-  </p>
+    <h2>6. Rechtsgrundlage der Verarbeitung</h2>
+    <p>
+      Die Verarbeitung der Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO
+      (Vertragserfüllung), soweit die Daten zur Bereitstellung der Funktionen der App
+      erforderlich sind. Die Nutzung der App ist freiwillig.
+    </p>
 
-  <h2>8. Deine Rechte</h2>
-  <p>
-    Soweit personenbezogene Daten im Sinne der DSGVO verarbeitet werden, hast du
-    folgende Rechte:
-  </p>
-  <ul>
-    <li>Recht auf Auskunft (Art. 15 DSGVO),</li>
-    <li>Recht auf Berichtigung (Art. 16 DSGVO),</li>
-    <li>Recht auf Löschung (Art. 17 DSGVO),</li>
-    <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO),</li>
-    <li>Recht auf Widerspruch (Art. 21 DSGVO),</li>
-    <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO).</li>
-  </ul>
-  <p>
-    Da die App keine Daten an mich übermittelt und ausschließlich lokal speichert,
-    können die meisten dieser Rechte direkt durch dich über die Einstellungen deines
-    Geräts (Löschen der App-Daten oder Deinstallation) wahrgenommen werden.
-  </p>
-  <p>
-    Darüber hinaus hast du das Recht, dich bei einer zuständigen
-    Datenschutzaufsichtsbehörde zu beschweren, wenn du der Ansicht bist, dass eine
-    Verarbeitung personenbezogener Daten gegen die DSGVO verstößt.
-  </p>
+    <h2>7. Speicherdauer &amp; Löschung</h2>
+    <p>
+      Sämtliche Daten werden ausschließlich lokal auf deinem Gerät gespeichert. Du
+      kannst diese Daten jederzeit löschen, indem du:
+    </p>
+    <ul>
+      <li>die App deinstallierst oder</li>
+      <li>in den Systemeinstellungen deines Geräts die App-Daten zurücksetzt.</li>
+    </ul>
+    <p>
+      Nach Deinstallation der App sind alle lokal gespeicherten Daten entfernt.
+    </p>
 
-  <h2>9. Änderungen dieser Datenschutzerklärung</h2>
-  <p>
-    Diese Datenschutzerklärung kann angepasst werden, wenn sich die App oder die
-    zugrundeliegenden rechtlichen Rahmenbedingungen ändern. Die jeweils aktuelle
-    Fassung ist unter dieser URL abrufbar.
-  </p>
+    <h2>8. Deine Rechte</h2>
+    <p>
+      Soweit personenbezogene Daten im Sinne der DSGVO verarbeitet werden, hast du
+      folgende Rechte:
+    </p>
+    <ul>
+      <li>Recht auf Auskunft (Art. 15 DSGVO),</li>
+      <li>Recht auf Berichtigung (Art. 16 DSGVO),</li>
+      <li>Recht auf Löschung (Art. 17 DSGVO),</li>
+      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO),</li>
+      <li>Recht auf Widerspruch (Art. 21 DSGVO),</li>
+      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO).</li>
+    </ul>
+    <p>
+      Da die App keine Daten an mich übermittelt und ausschließlich lokal speichert,
+      können die meisten dieser Rechte direkt durch dich über die Einstellungen deines
+      Geräts (Löschen der App-Daten oder Deinstallation) wahrgenommen werden.
+    </p>
+    <p>
+      Darüber hinaus hast du das Recht, dich bei einer zuständigen
+      Datenschutzaufsichtsbehörde zu beschweren, wenn du der Ansicht bist, dass eine
+      Verarbeitung personenbezogener Daten gegen die DSGVO verstößt.
+    </p>
 
-  <h2>10. Kontakt</h2>
-  <p>
-    Wenn du Fragen zum Datenschutz in der App <strong>RentenTracker</strong hast,
-    kannst du dich jederzeit an mich wenden:
-  </p>
-  <p>
-    <strong>[Vincent W.]</strong><br />
-    E-Mail: <a href="mailto:[vincent.waelken@gmail.com]">[vincent.waelken@gmail.com]</a>
-  </p>
+    <h2>9. Änderungen dieser Datenschutzerklärung</h2>
+    <p>
+      Diese Datenschutzerklärung kann angepasst werden, wenn sich die App oder die
+      zugrundeliegenden rechtlichen Rahmenbedingungen ändern. Die jeweils aktuelle
+      Fassung ist unter dieser URL abrufbar.
+    </p>
+
+    <h2>10. Kontakt</h2>
+    <p>
+      Wenn du Fragen zum Datenschutz in der App <strong>RentenTracker</strong> hast,
+      kannst du dich jederzeit an mich wenden:
+    </p>
+    <p>
+      <strong>Vincent W.</strong><br />
+      E-Mail: <a href="mailto:vincent.waelken@gmail.com">vincent.waelken@gmail.com</a>
+    </p>
+  </div>
+
+  <!-- English Version -->
+  <div class="lang-en" id="content-en">
+    <h1>Privacy Policy for the "RetirementTracker" App</h1>
+
+    <p class="small">Last updated: <span class="datum-en"></span></p>
+
+    <h2>1. Data Controller</h2>
+    <p>
+      The party responsible for data processing in connection with this app under the
+      General Data Protection Regulation (GDPR) is:
+    </p>
+    <p>
+      <strong>Vincent W.</strong><br />
+      Email: <a href="mailto:vincent.waelken@gmail.com">vincent.waelken@gmail.com</a>
+    </p>
+
+    <h2>2. General Information</h2>
+    <p>
+      The <strong>RetirementTracker</strong> app processes only data that is stored locally on the
+      user's device. No personal data is transmitted to me or to third parties.
+    </p>
+    <p>
+      The app is designed to process only the data that is absolutely necessary for
+      providing its functions ("Privacy by Design").
+    </p>
+
+    <h2>3. What Data is Processed?</h2>
+
+    <h3>3.1 Local App Data (on Your Device)</h3>
+    <p>
+      The app stores the following information exclusively on your device:
+    </p>
+    <ul>
+      <li>your selected retirement date,</li>
+      <li>your selected state/region,</li>
+      <li>your specified vacation/PTO days,</li>
+      <li>vacation days you marked in the calendar,</li>
+      <li>app settings (e.g., display/theme).</li>
+    </ul>
+    <p>
+      This data is only used to provide you with the app's functions (e.g., calculation
+      of remaining days until retirement).
+    </p>
+    <p><strong>This data never leaves your device.</strong></p>
+
+    <h3>3.2 No User Profiles Created</h3>
+    <p>
+      No personal profiles are created. The app does not use registration or a login
+      system; it is not possible for me to associate data with a specific person.
+    </p>
+
+    <h2>4. Permissions &amp; Access to Device Data</h2>
+
+    <p>
+      Depending on usage, certain permissions may be requested. These permissions are
+      used exclusively for the stated purposes.
+    </p>
+
+    <h3>4.1 Local Storage</h3>
+    <p>
+      The app stores settings and inputs (e.g., retirement date, vacation, state/region)
+      locally in an app-specific storage area on your device. No data is transmitted to
+      any server.
+    </p>
+
+    <h3>4.2 Push Notifications (if used)</h3>
+    <p>
+      If you enable notifications in the app, they are generated only locally on your
+      device. No data is sent to external notification or tracking services, as far as
+      technically possible. You can disable notifications at any time in your device's
+      system settings.
+    </p>
+
+    <h2>5. No Disclosure to Third Parties</h2>
+    <p>
+      No data is shared with third parties. Specifically:
+    </p>
+    <ul>
+      <li>no use of advertising networks,</li>
+      <li>no integration of analytics or tracking services (e.g., Google Analytics, Firebase Analytics),</li>
+      <li>no sharing with other companies or organizations.</li>
+    </ul>
+
+    <h2>6. Legal Basis for Processing</h2>
+    <p>
+      Data processing is based on Art. 6(1)(b) GDPR (contract performance), insofar as
+      the data is required to provide the app's functions. Use of the app is voluntary.
+    </p>
+
+    <h2>7. Storage Duration &amp; Deletion</h2>
+    <p>
+      All data is stored exclusively on your device. You can delete this data at any
+      time by:
+    </p>
+    <ul>
+      <li>uninstalling the app, or</li>
+      <li>resetting the app data in your device's system settings.</li>
+    </ul>
+    <p>
+      After uninstalling the app, all locally stored data is removed.
+    </p>
+
+    <h2>8. Your Rights</h2>
+    <p>
+      Insofar as personal data is processed under the GDPR, you have the following rights:
+    </p>
+    <ul>
+      <li>Right of access (Art. 15 GDPR),</li>
+      <li>Right to rectification (Art. 16 GDPR),</li>
+      <li>Right to erasure (Art. 17 GDPR),</li>
+      <li>Right to restriction of processing (Art. 18 GDPR),</li>
+      <li>Right to object (Art. 21 GDPR),</li>
+      <li>Right to data portability (Art. 20 GDPR).</li>
+    </ul>
+    <p>
+      Since the app does not transmit any data to me and stores data only locally, most
+      of these rights can be exercised directly by you through your device settings
+      (deleting app data or uninstalling the app).
+    </p>
+    <p>
+      In addition, you have the right to lodge a complaint with a competent data
+      protection supervisory authority if you believe that the processing of personal
+      data violates the GDPR.
+    </p>
+
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>
+      This privacy policy may be updated if the app or the underlying legal framework
+      changes. The current version is always available at this URL.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      If you have questions about data protection in the <strong>RetirementTracker</strong> app,
+      you can contact me at any time:
+    </p>
+    <p>
+      <strong>Vincent W.</strong><br />
+      Email: <a href="mailto:vincent.waelken@gmail.com">vincent.waelken@gmail.com</a>
+    </p>
+  </div>
 
   <script>
-    // Datum automatisch einsetzen
+    // Set dates
     const now = new Date();
     const d = String(now.getDate()).padStart(2, "0");
     const m = String(now.getMonth() + 1).padStart(2, "0");
     const y = now.getFullYear();
-    document.getElementById("datum").textContent = `${d}.${m}.${y}`;
+
+    // German date format
+    document.querySelector(".datum").textContent = `${d}.${m}.${y}`;
+    // English date format
+    const months = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+    document.querySelector(".datum-en").textContent = `${months[now.getMonth()]} ${now.getDate()}, ${y}`;
+
+    // Language toggle
+    let currentLang = 'de';
+
+    function toggleLanguage() {
+      const deContent = document.getElementById('content-de');
+      const enContent = document.getElementById('content-en');
+      const toggleBtn = document.getElementById('langToggle');
+      const htmlEl = document.documentElement;
+
+      if (currentLang === 'de') {
+        deContent.classList.remove('active');
+        enContent.classList.add('active');
+        toggleBtn.textContent = 'Deutsch';
+        htmlEl.lang = 'en';
+        currentLang = 'en';
+      } else {
+        enContent.classList.remove('active');
+        deContent.classList.add('active');
+        toggleBtn.textContent = 'English';
+        htmlEl.lang = 'de';
+        currentLang = 'de';
+      }
+    }
+
+    // Check browser language and set initial language
+    const browserLang = navigator.language || navigator.userLanguage;
+    if (!browserLang.startsWith('de')) {
+      toggleLanguage();
+    }
   </script>
 </body>
 </html>
