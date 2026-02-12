@@ -130,8 +130,116 @@
     <button id="langToggle" onclick="toggleLanguage()">English</button>
   </div>
 
+  <!-- Section Navigation -->
+  <div class="section-nav" id="nav-de">
+    <button class="active" onclick="showSection('support')">Support</button>
+    <button onclick="showSection('privacy')">Datenschutz</button>
+  </div>
+  <div class="section-nav" id="nav-en" style="display:none;">
+    <button class="active" onclick="showSection('support')">Support</button>
+    <button onclick="showSection('privacy')">Privacy Policy</button>
+  </div>
+
+  <!-- German Support -->
+  <div class="lang-de active" id="support-de">
+    <div class="section-content active" id="section-support">
+      <h1>Support – RentenTracker</h1>
+
+      <div class="support-box">
+        <h2 style="margin-top:0;">Hilfe &amp; Kontakt</h2>
+        <p>
+          Du hast eine Frage, ein Problem oder einen Verbesserungsvorschlag?
+          Schreib mir gerne eine E-Mail – ich antworte so schnell wie m&ouml;glich.
+        </p>
+        <a class="support-email" href="mailto:vincent.waelken@gmail.com?subject=RentenTracker%20Support">vincent.waelken@gmail.com</a>
+      </div>
+
+      <h2>H&auml;ufige Fragen</h2>
+
+      <h3>Wie werden meine Arbeitstage berechnet?</h3>
+      <p>
+        Die App z&auml;hlt alle Werktage (Montag bis Freitag) von heute bis zu deinem Renteneintritt
+        und zieht davon die gesetzlichen Feiertage deiner Region sowie deine Urlaubstage ab.
+      </p>
+
+      <h3>Stimmen die Feiertage f&uuml;r mein Bundesland / meinen Kanton?</h3>
+      <p>
+        Ja. Die App enth&auml;lt die gesetzlichen Feiertage f&uuml;r alle Regionen in Deutschland,
+        &Ouml;sterreich, der Schweiz, den USA und Gro&szlig;britannien. Sollte ein Feiertag fehlen,
+        kannst du ihn im Kalender selbst hinzuf&uuml;gen.
+      </p>
+
+      <h3>Werden meine Daten an einen Server gesendet?</h3>
+      <p>
+        Nein. Alle Daten werden ausschlie&szlig;lich lokal auf deinem Ger&auml;t gespeichert.
+        Es findet keine &Uuml;bertragung an Server oder Dritte statt.
+      </p>
+
+      <h3>Wie kann ich meine Daten l&ouml;schen?</h3>
+      <p>
+        Deinstalliere die App oder setze die App-Daten in den Systemeinstellungen
+        deines Ger&auml;ts zur&uuml;ck. Danach sind alle Daten entfernt.
+      </p>
+
+      <h3>Ich habe Premium gekauft, aber die Widgets werden nicht angezeigt.</h3>
+      <p>
+        Versuche, den Kauf &uuml;ber die Einstellungen der App wiederherzustellen
+        (&bdquo;Kauf wiederherstellen&ldquo;). Falls das nicht hilft, schreib mir eine E-Mail.
+      </p>
+    </div>
+  </div>
+
+  <!-- English Support -->
+  <div class="lang-en" id="support-en">
+    <div class="section-content active" id="section-support-en">
+      <h1>Support – RetirementTracker</h1>
+
+      <div class="support-box">
+        <h2 style="margin-top:0;">Help &amp; Contact</h2>
+        <p>
+          Have a question, issue, or suggestion?
+          Send me an email – I'll get back to you as soon as possible.
+        </p>
+        <a class="support-email" href="mailto:vincent.waelken@gmail.com?subject=RetirementTracker%20Support">vincent.waelken@gmail.com</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>How are my workdays calculated?</h3>
+      <p>
+        The app counts all weekdays (Monday to Friday) from today until your retirement date,
+        then subtracts public holidays for your region and your vacation days.
+      </p>
+
+      <h3>Are the holidays correct for my state/region?</h3>
+      <p>
+        Yes. The app includes public holidays for all regions in Germany, Austria, Switzerland,
+        the USA, and the UK. If a holiday is missing, you can add it manually in the calendar.
+      </p>
+
+      <h3>Is my data sent to a server?</h3>
+      <p>
+        No. All data is stored exclusively on your device.
+        No data is transmitted to servers or third parties.
+      </p>
+
+      <h3>How can I delete my data?</h3>
+      <p>
+        Uninstall the app or reset the app data in your device's system settings.
+        All data will be removed.
+      </p>
+
+      <h3>I purchased Premium but the widgets aren't showing.</h3>
+      <p>
+        Try restoring your purchase in the app settings (&ldquo;Restore purchase&rdquo;).
+        If that doesn't help, send me an email.
+      </p>
+    </div>
+  </div>
+
   <!-- German Version -->
   <div class="lang-de active" id="content-de">
+    <div class="section-content" id="section-privacy">
     <h1>Datenschutzerkl&auml;rung f&uuml;r die App &bdquo;RentenTracker&ldquo;</h1>
 
     <p class="small">Stand: <span class="datum"></span></p>
@@ -300,10 +408,12 @@
       <strong>Vincent W.</strong><br />
       E-Mail: <a href="mailto:vincent.waelken@gmail.com">vincent.waelken@gmail.com</a>
     </p>
+    </div>
   </div>
 
   <!-- English Version -->
   <div class="lang-en" id="content-en">
+    <div class="section-content" id="section-privacy-en">
     <h1>Privacy Policy for the &ldquo;RetirementTracker&rdquo; App</h1>
 
     <p class="small">Last updated: <span class="datum-en"></span></p>
