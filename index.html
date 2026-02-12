@@ -576,7 +576,58 @@
       <strong>Vincent W.</strong><br />
       Email: <a href="mailto:vincent.waelken@gmail.com">vincent.waelken@gmail.com</a>
     </p>
+    </div>
   </div>
+
+  <script>
+    // Section navigation
+    function showSection(section) {
+      const allSections = document.querySelectorAll('.section-content');
+      allSections.forEach(el => el.classList.remove('active'));
+
+      const allNavBtns = document.querySelectorAll('.section-nav button');
+      allNavBtns.forEach(btn => btn.classList.remove('active'));
+
+      if (section === 'support') {
+        document.getElementById('section-support').classList.add('active');
+        document.getElementById('section-support-en').classList.add('active');
+        document.querySelectorAll('.section-nav button:first-child').forEach(btn => btn.classList.add('active'));
+        // Show support containers, hide privacy containers
+        document.getElementById('support-de').style.display = '';
+        document.getElementById('support-en').style.display = '';
+        document.getElementById('content-de').style.display = 'none';
+        document.getElementById('content-en').style.display = 'none';
+      } else {
+        document.getElementById('section-privacy').classList.add('active');
+        document.getElementById('section-privacy-en').classList.add('active');
+        document.querySelectorAll('.section-nav button:last-child').forEach(btn => btn.classList.add('active'));
+        // Show privacy containers, hide support containers
+        document.getElementById('support-de').style.display = 'none';
+        document.getElementById('support-en').style.display = 'none';
+        document.getElementById('content-de').style.display = '';
+        document.getElementById('content-en').style.display = '';
+      }
+
+      // Re-apply language visibility
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const deDivs = document.querySelectorAll('.lang-de');
+      const enDivs = document.querySelectorAll('.lang-en');
+      if (currentLang === 'de') {
+        deDivs.forEach(el => el.classList.add('active'));
+        enDivs.forEach(el => el.classList.remove('active'));
+        document.getElementById('nav-de').style.display = 'flex';
+        document.getElementById('nav-en').style.display = 'none';
+      } else {
+        enDivs.forEach(el => el.classList.add('active'));
+        deDivs.forEach(el => el.classList.remove('active'));
+        document.getElementById('nav-en').style.display = 'flex';
+        document.getElementById('nav-de').style.display = 'none';
+      }
+    }
+  </script>
 
   <script>
     // Set dates
@@ -596,30 +647,34 @@
     let currentLang = 'de';
 
     function toggleLanguage() {
-      const deContent = document.getElementById('content-de');
-      const enContent = document.getElementById('content-en');
       const toggleBtn = document.getElementById('langToggle');
       const htmlEl = document.documentElement;
 
       if (currentLang === 'de') {
-        deContent.classList.remove('active');
-        enContent.classList.add('active');
         toggleBtn.textContent = 'Deutsch';
         htmlEl.lang = 'en';
         currentLang = 'en';
       } else {
-        enContent.classList.remove('active');
-        deContent.classList.add('active');
         toggleBtn.textContent = 'English';
         htmlEl.lang = 'de';
         currentLang = 'de';
       }
+      applyLanguage();
     }
+
+    // Initial state: show support section, hide privacy
+    document.getElementById('content-de').style.display = 'none';
+    document.getElementById('content-en').style.display = 'none';
 
     // Check browser language and set initial language
     const browserLang = navigator.language || navigator.userLanguage;
     if (!browserLang.startsWith('de')) {
       toggleLanguage();
+    }
+
+    // Handle #privacy or #support hash in URL
+    if (window.location.hash === '#privacy' || window.location.hash === '#datenschutz') {
+      showSection('privacy');
     }
   </script>
 </body>
